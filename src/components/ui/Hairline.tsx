@@ -1,4 +1,4 @@
-type HairlineVariant = "default" | "strong" | "cream" | "blue";
+type HairlineVariant = "default" | "strong" | "bronze" | "blue";
 
 interface HairlineProps {
   variant?: HairlineVariant;
@@ -9,7 +9,7 @@ interface HairlineProps {
 const variantClasses: Record<HairlineVariant, string> = {
   default: "bg-border",
   strong: "bg-border-strong",
-  cream: "bg-accent-cream/40",
+  bronze: "bg-accent-bronze/40",
   blue: "bg-accent-blue",
 };
 

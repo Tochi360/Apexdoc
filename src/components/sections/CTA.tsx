@@ -11,7 +11,7 @@ export function CTA() {
   return (
     <section
       id="contact"
-      className="relative bg-ink-deepest overflow-hidden py-40 lg:py-48"
+      className="relative bg-ink-deep overflow-hidden py-40 lg:py-48"
       aria-labelledby="cta-heading"
     >
       <GlowBackground
@@ -21,7 +21,7 @@ export function CTA() {
             left: "-10%",
             width: "1000px",
             height: "1000px",
-            variant: "blue",
+            variant: "bronze",
             drift: true,
           },
           {
@@ -29,15 +29,15 @@ export function CTA() {
             right: "-5%",
             width: "600px",
             height: "600px",
-            variant: "cream",
+            variant: "warm",
           },
         ]}
-        gradient="bg-gradient-to-b from-ink-night via-ink-deepest to-black"
+        gradient="bg-gradient-to-b from-ink-deep via-ink-deepest to-ink-deepest"
       />
       <div className="grain-overlay absolute inset-0 z-[1]" aria-hidden />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <span className="label-mono block mb-12">[ READY ]</span>
+        <span className="label-mono block mb-12 text-accent-bronze">[ READY ]</span>
 
         <motion.div
           initial="hidden"
@@ -46,28 +46,28 @@ export function CTA() {
           variants={reducedMotion ? fadeUpReduced : fadeUp}
         >
           <h2 id="cta-heading">
-            <span className="display-thin block">Take the first step.</span>
+            <span className="display-thin-inverted block">Take the first step.</span>
             <span
-              className="display-thin block mt-8"
+              className="display-thin-inverted block mt-8"
               style={{ fontSize: "clamp(2rem, 5vw, 3rem)" }}
             >
               Begin with a{" "}
               <span
-                className="display-italic"
+                className="display-italic-inverted"
                 style={{ fontSize: "inherit" }}
               >
                 complimentary
               </span>
             </span>
             <span
-              className="display-thin block"
+              className="display-thin-inverted block"
               style={{ fontSize: "clamp(2rem, 5vw, 3rem)" }}
             >
               records audit.
             </span>
           </h2>
 
-          <p className="body-lg mt-8 max-w-2xl mx-auto">
+          <p className="body-lg mt-8 max-w-2xl mx-auto text-ink-whisper">
             No commitment, no obligation, no contracts. A complete diagnostic of your
             current records situation — yours to keep regardless of whether we work
             together.
@@ -77,19 +77,19 @@ export function CTA() {
             <Button href="#inquiry-form" size="lg">
               Begin records audit
             </Button>
-            <Button href="mailto:hello@apexdms.ca" variant="ghost" size="lg">
+            <Button href="mailto:info@apexdms.ca" variant="ghostDark" size="lg">
               Contact our practice
             </Button>
           </div>
 
-          <p className="label-mono-sm mt-12">
+          <p className="label-mono-sm mt-12 text-ink-faint">
             RESPONSE TIME · WITHIN 24 HOURS · MONDAY TO FRIDAY
           </p>
         </motion.div>
 
         <motion.form
           id="inquiry-form"
-          className="max-w-2xl mx-auto mt-20 bg-white/[0.02] border border-white/[0.08] rounded-lg p-8 lg:p-10 backdrop-blur-sm text-left"
+          className="max-w-2xl mx-auto mt-20 bg-white/[0.04] border border-white/[0.1] rounded-lg p-8 lg:p-10 backdrop-blur-sm text-left"
           initial="hidden"
           whileInView="visible"
           viewport={viewOnce}
@@ -100,32 +100,31 @@ export function CTA() {
             {[
               { id: "name", label: "NAME", type: "text", placeholder: "Your name" },
               { id: "email", label: "EMAIL", type: "email", placeholder: "you@company.com" },
-              { id: "phone", label: "PHONE", type: "tel", placeholder: "+1 (416) 555-0100" },
               { id: "business", label: "BUSINESS", type: "text", placeholder: "Company name" },
             ].map((field) => (
               <div key={field.id}>
-                <label htmlFor={field.id} className="label-mono-sm block mb-3">
+                <label htmlFor={field.id} className="label-mono-sm block mb-3 text-ink-faint">
                   {field.label}
                 </label>
                 <input
                   id={field.id}
                   type={field.type}
                   placeholder={field.placeholder}
-                  className="w-full bg-transparent border-0 border-b border-white/15 focus:border-accent-blue px-0 py-3 text-ice-warm placeholder-ice-faint outline-none transition-colors duration-300"
+                  className="w-full bg-transparent border-0 border-b border-white/20 focus:border-accent-bronze px-0 py-3 text-paper-light placeholder-ink-faint outline-none transition-colors duration-300"
                 />
               </div>
             ))}
           </div>
 
           <div className="mt-8">
-            <label htmlFor="message" className="label-mono-sm block mb-3">
+            <label htmlFor="message" className="label-mono-sm block mb-3 text-ink-faint">
               MESSAGE
             </label>
             <textarea
               id="message"
               rows={4}
               placeholder="Tell us about your records situation..."
-              className="w-full bg-transparent border-0 border-b border-white/15 focus:border-accent-blue px-0 py-3 text-ice-warm placeholder-ice-faint outline-none transition-colors duration-300 resize-none"
+              className="w-full bg-transparent border-0 border-b border-white/20 focus:border-accent-bronze px-0 py-3 text-paper-light placeholder-ink-faint outline-none transition-colors duration-300 resize-none"
             />
           </div>
 

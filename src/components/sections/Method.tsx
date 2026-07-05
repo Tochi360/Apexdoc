@@ -29,20 +29,20 @@ export function Method() {
   return (
     <section
       id="method"
-      className="relative bg-ink-deepest overflow-hidden py-32 lg:py-40"
+      className="relative bg-paper-warm overflow-hidden py-32 lg:py-40"
       aria-labelledby="method-heading"
     >
       <GlowBackground
         glows={[
           {
-            top: "-20%",
-            left: "10%",
+            top: "-10%",
+            left: "5%",
             width: "700px",
             height: "700px",
-            variant: "blue",
+            variant: "sand",
           },
         ]}
-        gradient="bg-gradient-to-b from-ink-night via-ink-deepest to-black"
+        gradient="bg-gradient-to-b from-paper-warm via-sand/20 to-paper-warm"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
@@ -63,18 +63,16 @@ export function Method() {
         </p>
 
         <div ref={containerRef} className="mt-20 relative">
-          {/* Connecting line — desktop horizontal */}
-          <div className="hidden lg:block absolute top-[3.5rem] left-0 right-0 h-px bg-ice-faint/30">
+          <div className="hidden lg:block absolute top-[3.5rem] left-0 right-0 h-px bg-ink-faint/30">
             <motion.div
-              className="h-full bg-accent-blue origin-left"
+              className="h-full bg-accent-bronze origin-left"
               style={{ width: lineWidth }}
             />
           </div>
 
-          {/* Connecting line — mobile vertical */}
-          <div className="lg:hidden absolute top-0 bottom-0 left-[1.5rem] w-px bg-ice-faint/30">
+          <div className="lg:hidden absolute top-0 bottom-0 left-[1.5rem] w-px bg-ink-faint/30">
             <motion.div
-              className="w-full bg-accent-blue origin-top"
+              className="w-full bg-accent-bronze origin-top"
               style={{ height: lineWidth }}
             />
           </div>
@@ -98,7 +96,7 @@ export function Method() {
                 >
                   {step.number}
                 </p>
-                <div className="w-10 h-px bg-accent-cream mt-4 mb-6" aria-hidden />
+                <div className="w-10 h-px bg-accent-bronze mt-4 mb-6" aria-hidden />
                 <h3 className="heading-lg mb-4">{step.title}</h3>
                 <p className="body max-w-xs">{step.description}</p>
               </motion.div>
@@ -108,10 +106,10 @@ export function Method() {
 
         <div className="mt-16">
           <a
-            href="#industries"
-            className="label-mono hover:text-ice-bright transition-colors duration-300"
+            href="#who-we-serve"
+            className="label-mono hover:text-ink-deep transition-colors duration-300"
           >
-            [ 05 — INDUSTRIES ↓ ]
+            [ 05 — WHO WE SERVE ↓ ]
           </a>
         </div>
       </div>

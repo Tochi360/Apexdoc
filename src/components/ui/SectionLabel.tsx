@@ -16,7 +16,7 @@ export function SectionLabel({
       <span className="label-mono">
         [ {index} — {title} ]
       </span>
-      <span className="h-px w-12 bg-border-strong" aria-hidden />
+      <span className="h-px w-12 bg-ink-deep/20" aria-hidden />
       {meta && <span className="label-mono-sm">{meta}</span>}
     </div>
   );

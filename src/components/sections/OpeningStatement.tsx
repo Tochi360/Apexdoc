@@ -17,7 +17,7 @@ export function OpeningStatement() {
   return (
     <section
       ref={ref}
-      className="relative bg-ink-navy overflow-hidden py-32 lg:py-48"
+      className="relative bg-paper overflow-hidden py-32 lg:py-48"
       aria-labelledby="opening-heading"
     >
       <GlowBackground
@@ -27,10 +27,10 @@ export function OpeningStatement() {
             right: "-5%",
             width: "800px",
             height: "800px",
-            variant: "cream",
+            variant: "warm",
           },
         ]}
-        gradient="bg-gradient-to-b from-ink-navy via-ink-mid/30 to-ink-navy"
+        gradient="bg-gradient-to-b from-paper via-paper-warm/30 to-paper"
       />
 
       <motion.div
@@ -63,7 +63,7 @@ export function OpeningStatement() {
           className="mt-20 flex flex-col gap-6"
         >
           <div className="h-px w-[30%] bg-border-strong" aria-hidden />
-          <a href="#services" className="label-mono hover:text-ice-bright transition-colors">
+          <a href="#services" className="label-mono hover:text-ink-deep transition-colors">
             [ 03 — SERVICES ↓ ]
           </a>
         </motion.div>

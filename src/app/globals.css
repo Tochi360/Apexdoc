@@ -1,52 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  /* Ink — the navy depths */
-  --ink-deepest: #050b17;
-  --ink-night: #0a1428;
-  --ink-navy: #0f1a2e;
-  --ink-mid: #1b2a45;
-  --ink-soft: #2a3d5c;
+  /* Paper — warm off-white tones */
+  --paper-brightest: #fdfcf8;
+  --paper-light: #f9f6ee;
+  --paper: #f4efe1;
+  --paper-warm: #ede4ce;
+  --sand: #ddd1b3;
+
+  /* Ink — deep warm dark tones */
+  --ink-deepest: #0f1420;
+  --ink-deep: #1a1e2e;
+  --ink: #2a2e3e;
+  --ink-muted: #4a4f5e;
+  --ink-soft: #7a7d8a;
+  --ink-faint: #a8abb5;
+  --ink-whisper: #d4d2cb;
 
   /* Borders */
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
-  --border-warm: rgba(232, 212, 162, 0.2);
-
-  /* Ice — the lights */
-  --ice-bright: #ffffff;
-  --ice-warm: #f4f1ea;
-  --ice-muted: #c5d1e3;
-  --ice-dim: #8fa4bd;
-  --ice-faint: #5a7090;
+  --border: rgba(26, 30, 46, 0.1);
+  --border-strong: rgba(26, 30, 46, 0.16);
+  --border-warm: rgba(163, 130, 76, 0.3);
 
   /* Accents */
-  --accent-blue: #63b3ed;
-  --accent-blue-deep: #4a90c2;
-  --accent-cream: #e8d4a2;
+  --accent-blue: #004595;
+  --accent-blue-deep: #003472;
+  --accent-bronze: #a3824c;
+  --accent-bronze-deep: #8a6c3e;
 
-  /* Glow */
-  --glow-blue: rgba(99, 179, 237, 0.12);
-  --glow-cream: rgba(232, 212, 162, 0.06);
+  /* Glows */
+  --glow-warm: rgba(232, 212, 162, 0.25);
+  --glow-sand: rgba(221, 209, 179, 0.4);
+  --glow-blue: rgba(0, 69, 149, 0.05);
+  --glow-bronze: rgba(163, 130, 76, 0.15);
 
   /* Easing */
   --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme inline {
+  --color-paper-brightest: var(--paper-brightest);
+  --color-paper-light: var(--paper-light);
+  --color-paper: var(--paper);
+  --color-paper-warm: var(--paper-warm);
+  --color-sand: var(--sand);
   --color-ink-deepest: var(--ink-deepest);
-  --color-ink-night: var(--ink-night);
-  --color-ink-navy: var(--ink-navy);
-  --color-ink-mid: var(--ink-mid);
+  --color-ink-deep: var(--ink-deep);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
   --color-ink-soft: var(--ink-soft);
-  --color-ice-bright: var(--ice-bright);
-  --color-ice-warm: var(--ice-warm);
-  --color-ice-muted: var(--ice-muted);
-  --color-ice-dim: var(--ice-dim);
-  --color-ice-faint: var(--ice-faint);
+  --color-ink-faint: var(--ink-faint);
+  --color-ink-whisper: var(--ink-whisper);
   --color-accent-blue: var(--accent-blue);
   --color-accent-blue-deep: var(--accent-blue-deep);
-  --color-accent-cream: var(--accent-cream);
+  --color-accent-bronze: var(--accent-bronze);
+  --color-accent-bronze-deep: var(--accent-bronze-deep);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
   --color-border-warm: var(--border-warm);
@@ -65,11 +73,11 @@
 /* ===== DISPLAY — Weight contrast ===== */
 .display-thin {
   font-family: var(--font-inter), system-ui, sans-serif;
-  font-weight: 200;
+  font-weight: 250;
   font-size: clamp(2.5rem, 7vw, 6rem);
   line-height: 1;
   letter-spacing: -0.04em;
-  color: var(--ice-bright);
+  color: var(--accent-blue);
 }
 
 .display-italic {
@@ -79,7 +87,27 @@
   font-size: clamp(2.5rem, 7vw, 6rem);
   line-height: 1;
   letter-spacing: -0.025em;
-  color: var(--accent-cream);
+  color: var(--accent-bronze);
+}
+
+/* Inverted display — for dark CTA/footer moments */
+.display-thin-inverted {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 250;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--paper-light);
+}
+
+.display-italic-inverted {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--accent-bronze);
 }
 
 /* ===== HEADINGS ===== */
@@ -89,7 +117,7 @@
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.1;
   letter-spacing: -0.025em;
-  color: var(--ice-bright);
+  color: var(--ink-deep);
 }
 
 .heading-lg {
@@ -98,7 +126,7 @@
   font-size: clamp(1.5rem, 2.5vw, 1.875rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: var(--ice-bright);
+  color: var(--ink-deep);
 }
 
 .heading-md {
@@ -107,7 +135,7 @@
   font-size: 1.25rem;
   line-height: 1.35;
   letter-spacing: -0.015em;
-  color: var(--ice-bright);
+  color: var(--ink-deep);
 }
 
 .heading-italic {
@@ -116,7 +144,7 @@
   font-style: italic;
   font-size: 1.25rem;
   line-height: 1.4;
-  color: var(--accent-cream);
+  color: var(--accent-bronze);
 }
 
 /* ===== BODY ===== */
@@ -125,16 +153,16 @@
   font-weight: 300;
   font-size: 1.1875rem;
   line-height: 1.65;
-  color: var(--ice-muted);
+  color: var(--ink-muted);
   letter-spacing: -0.005em;
 }
 
 .body {
   font-family: var(--font-inter), system-ui, sans-serif;
-  font-weight: 400;
+  font-weight: 450;
   font-size: 1.0625rem;
   line-height: 1.7;
-  color: var(--ice-muted);
+  color: var(--ink-muted);
 }
 
 .body-sm {
@@ -142,7 +170,7 @@
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.6;
-  color: var(--ice-dim);
+  color: var(--ink-soft);
 }
 
 /* ===== UI / LABELS ===== */
@@ -163,7 +191,7 @@
   line-height: 1;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ice-faint);
+  color: var(--ink-faint);
 }
 
 .label-index {
@@ -173,6 +201,11 @@
   line-height: 1;
   letter-spacing: 0.08em;
   color: var(--accent-blue);
+}
+
+/* Paper shadow utilities */
+.paper-shadow-soft {
+  box-shadow: 0 4px 24px rgba(20, 24, 44, 0.06);
 }
 
 html {
@@ -186,8 +219,8 @@ html {
 }
 
 body {
-  background: var(--ink-night);
-  color: var(--ice-muted);
+  background-color: var(--paper-light);
+  color: var(--ink-muted);
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -200,8 +233,8 @@ body {
   left: 1rem;
   z-index: 100;
   padding: 0.75rem 1.25rem;
-  background: var(--accent-blue);
-  color: var(--ink-night);
+  background: var(--ink-deep);
+  color: var(--paper-light);
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: 9999px;

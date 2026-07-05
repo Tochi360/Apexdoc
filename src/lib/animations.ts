@@ -3,7 +3,7 @@ import type { Variants, Transition } from "framer-motion";
 export const cinematicEase = [0.16, 1, 0.3, 1] as const;
 
 export const cinematicTransition: Transition = {
-  duration: 0.9,
+  duration: 1.1,
   ease: cinematicEase,
 };
 
@@ -12,7 +12,7 @@ export const fadeUp: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.9, ease: cinematicEase },
+    transition: { duration: 1.1, ease: cinematicEase },
   },
 };
 

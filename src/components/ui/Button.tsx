@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
-type ButtonVariant = "primary" | "ghost" | "link";
+type ButtonVariant = "primary" | "ghost" | "ghostDark" | "bronze" | "link";
 type ButtonSize = "default" | "sm" | "lg";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -22,10 +22,14 @@ const sizeClasses: Record<ButtonSize, string> = {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-accent-blue hover:bg-accent-blue-deep text-ink-night font-medium rounded-full transition-colors duration-300",
+    "bg-accent-blue hover:bg-accent-blue-deep text-paper-light font-medium rounded-full transition-colors duration-300",
   ghost:
-    "bg-transparent hover:bg-white/[0.04] text-ice-warm hover:text-ice-bright border border-white/15 hover:border-white/30 font-medium rounded-full transition-all duration-300",
-  link: "bg-transparent text-accent-blue hover:text-ice-bright font-medium border-b border-transparent hover:border-accent-blue rounded-none px-0 py-0 transition-all duration-300",
+    "bg-transparent hover:bg-paper-warm/50 text-ink-deep hover:text-ink-deepest border border-ink-deep/15 hover:border-ink-deep/40 font-medium rounded-full transition-all duration-300",
+  ghostDark:
+    "bg-transparent hover:bg-white/[0.06] text-paper-light hover:text-paper-brightest border border-white/20 hover:border-white/40 font-medium rounded-full transition-all duration-300",
+  bronze:
+    "bg-accent-bronze hover:bg-accent-bronze-deep text-paper-brightest font-medium rounded-full transition-colors duration-300",
+  link: "bg-transparent text-accent-blue hover:text-accent-blue-deep font-medium border-b border-transparent hover:border-accent-blue rounded-none px-0 py-0 transition-all duration-300",
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -34,7 +38,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = "primary",
       size = "default",
       href,
-      icon = variant === "primary" ? "arrow-up-right" : "arrow-right",
+      icon = variant === "primary" || variant === "bronze" ? "arrow-up-right" : "arrow-right",
       children,
       className = "",
       ...props

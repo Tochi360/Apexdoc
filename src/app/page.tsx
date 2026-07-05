@@ -4,9 +4,8 @@ import { Hero } from "@/components/sections/Hero";
 import { OpeningStatement } from "@/components/sections/OpeningStatement";
 import { Services } from "@/components/sections/Services";
 import { Method } from "@/components/sections/Method";
-import { Construction } from "@/components/sections/Construction";
+import { WhoWeServe } from "@/components/sections/WhoWeServe";
 import { WhyApex } from "@/components/sections/WhyApex";
-import { Testimonial } from "@/components/sections/Testimonial";
 import { CTA } from "@/components/sections/CTA";
 
 export default function Home() {
@@ -18,9 +17,8 @@ export default function Home() {
         <OpeningStatement />
         <Services />
         <Method />
-        <Construction />
+        <WhoWeServe />
         <WhyApex />
-        <Testimonial />
         <CTA />
       </main>
       <Footer />

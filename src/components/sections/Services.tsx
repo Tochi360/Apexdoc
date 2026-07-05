@@ -15,17 +15,17 @@ export function Services() {
   return (
     <section
       id="services"
-      className="relative bg-ink-night overflow-hidden py-32 lg:py-40"
+      className="relative bg-paper-light overflow-hidden py-32 lg:py-40"
       aria-labelledby="services-heading"
     >
       <GlowBackground
         glows={[
           {
-            bottom: "20%",
-            left: "-15%",
+            top: "10%",
+            right: "-10%",
             width: "900px",
             height: "900px",
-            variant: "blue",
+            variant: "sand",
             drift: true,
           },
         ]}
@@ -73,13 +73,13 @@ export function Services() {
                 <Card featured={service.featured} className="h-full flex flex-col">
                   <div className="flex items-center justify-between mb-6">
                     <span className="label-index">[ {service.index} ]</span>
-                    <Icon className="w-5 h-5 text-ice-dim" strokeWidth={1.25} />
+                    <Icon className="w-5 h-5 text-ink-soft" strokeWidth={1.25} />
                   </div>
                   <h3 className="heading-md mb-3">{service.title}</h3>
-                  <p className="body-sm text-ice-muted flex-1">{service.description}</p>
+                  <p className="body-sm flex-1">{service.description}</p>
                   <a
                     href="#method"
-                    className="inline-flex items-center gap-2 text-accent-blue hover:text-ice-bright text-sm font-medium mt-6 border-b border-transparent hover:border-accent-blue transition-all duration-300 w-fit"
+                    className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue-deep text-sm font-medium mt-6 border-b border-transparent hover:border-accent-blue transition-all duration-300 w-fit"
                   >
                     Learn the method
                     <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={1.5} />
@@ -93,7 +93,7 @@ export function Services() {
         <div className="mt-16">
           <a
             href="#method"
-            className="label-mono hover:text-ice-bright transition-colors duration-300"
+            className="label-mono hover:text-ink-deep transition-colors duration-300"
           >
             [ 04 — METHOD ↓ ]
           </a>

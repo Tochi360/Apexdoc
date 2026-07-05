@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "document digitization Canada",
     "records management consulting",
     "compliance document management Canada",
-    "construction records management",
+    "Canadian SMB records management",
     "Canadian records retention",
     "professional records audit",
     "PIPEDA compliance",
@@ -101,7 +101,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full bg-ink-night text-ice-muted antialiased">
+      <body className="min-h-full bg-paper-light text-ink-muted antialiased">
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>

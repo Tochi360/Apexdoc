@@ -10,7 +10,7 @@ import {
 export const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Method", href: "#method" },
-  { label: "Industries", href: "#industries" },
+  { label: "Who we serve", href: "#who-we-serve" },
   { label: "About", href: "#practice" },
 ] as const;
 
@@ -117,16 +117,16 @@ export const METHOD_STEPS = [
   },
 ] as const;
 
-export const CONSTRUCTION_RECORDS = [
-  "Contracts & subcontracts",
-  "Change orders",
-  "RFIs",
-  "Site reports",
-  "Safety documentation",
-  "Drawings & specifications",
-  "Closeout documentation",
-  "Project records",
-  "Permits & inspections",
+export const SMB_RECORD_TYPES = [
+  "Financial & tax records",
+  "HR & employment files",
+  "Client contracts & agreements",
+  "Vendor & supplier documents",
+  "Regulatory & compliance files",
+  "Insurance & licensing records",
+  "Operational correspondence",
+  "Invoices & accounts payable",
+  "Corporate governance files",
 ] as const;
 
 export const PRINCIPLES = [
@@ -179,7 +179,7 @@ export const FOOTER_SERVICES = [
 export const FOOTER_PRACTICE = [
   "About",
   "Method",
-  "Industries",
+  "Who we serve",
   "Insights",
   "Contact",
 ] as const;

@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 
-export type GlowVariant = "blue" | "cream";
+export type GlowVariant = "warm" | "sand" | "bronze" | "blue";
 
 interface GlowConfig {
   top?: string;
@@ -21,10 +21,17 @@ interface GlowBackgroundProps {
   gradient?: string;
 }
 
+const glowGradients: Record<GlowVariant, string> = {
+  warm: "radial-gradient(circle, var(--glow-warm) 0%, transparent 60%)",
+  sand: "radial-gradient(circle, var(--glow-sand) 0%, transparent 65%)",
+  bronze: "radial-gradient(circle, var(--glow-bronze) 0%, transparent 60%)",
+  blue: "radial-gradient(circle, var(--glow-blue) 0%, transparent 60%)",
+};
+
 export function GlowBackground({
   glows,
   className = "",
-  gradient = "bg-gradient-to-br from-ink-night via-ink-navy to-ink-night",
+  gradient = "bg-gradient-to-br from-paper-light via-paper to-paper-light",
 }: GlowBackgroundProps) {
   const reducedMotion = useReducedMotion();
 
@@ -32,11 +39,6 @@ export function GlowBackground({
     <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       <div className={`absolute inset-0 ${gradient}`} aria-hidden />
       {glows.map((glow, i) => {
-        const bgColor =
-          glow.variant === "blue"
-            ? "radial-gradient(circle, var(--glow-blue) 0%, transparent 60%)"
-            : "radial-gradient(circle, var(--glow-cream) 0%, transparent 65%)";
-
         const style: React.CSSProperties = {
           top: glow.top,
           right: glow.right,
@@ -44,8 +46,8 @@ export function GlowBackground({
           left: glow.left,
           width: glow.width,
           height: glow.height,
-          background: bgColor,
-          filter: "blur(40px)",
+          background: glowGradients[glow.variant],
+          filter: "blur(60px)",
         };
 
         if (glow.drift && !reducedMotion) {

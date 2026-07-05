@@ -23,9 +23,9 @@ function BrandMark() {
     <a href="#" className="flex items-center gap-3 group">
       <Monogram />
       <div className="flex items-center gap-3">
-        <span className="heading-md text-base">Apex</span>
+        <span className="heading-md text-base !text-accent-blue">Apex</span>
         <span className="body-sm hidden sm:inline">Document Management</span>
-        <span className="h-4 w-px bg-white/10 hidden md:block" aria-hidden />
+        <span className="h-4 w-px bg-ink-deep/15 hidden md:block" aria-hidden />
         <span className="label-mono-sm hidden md:inline">EST. 2025 · CANADA</span>
       </div>
     </a>
@@ -37,7 +37,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-ink-night/80 backdrop-blur-2xl border-b border-white/[0.06]">
+      <header className="sticky top-0 z-50 bg-paper-light/85 backdrop-blur-2xl border-b border-border">
         <nav
           className="max-w-7xl mx-auto px-6 lg:px-12 h-[72px] flex items-center justify-between"
           aria-label="Main navigation"
@@ -49,7 +49,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-ice-muted hover:text-ice-bright transition-colors duration-300"
+                className="text-sm font-medium text-ink-muted hover:text-ink-deep transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -64,7 +64,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="lg:hidden p-2 text-ice-muted hover:text-ice-bright transition-colors"
+            className="lg:hidden p-2 text-ink-muted hover:text-ink-deep transition-colors"
             onClick={() => setMobileOpen(true)}
             aria-label="Open menu"
             aria-expanded={mobileOpen}
@@ -77,7 +77,7 @@ export function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="fixed inset-0 z-[60] bg-ink-deepest/98 backdrop-blur-2xl lg:hidden"
+            className="fixed inset-0 z-[60] bg-paper-brightest/98 backdrop-blur-2xl lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -89,7 +89,7 @@ export function Navbar() {
                 <button
                   type="button"
                   onClick={() => setMobileOpen(false)}
-                  className="p-2 text-ice-muted hover:text-ice-bright"
+                  className="p-2 text-ink-muted hover:text-ink-deep"
                   aria-label="Close menu"
                 >
                   <X className="w-5 h-5" strokeWidth={1.25} />
@@ -112,7 +112,7 @@ export function Navbar() {
                 ))}
               </nav>
 
-              <div className="pt-8 border-t border-white/[0.08]">
+              <div className="pt-8 border-t border-border">
                 <Button href="#contact" className="w-full justify-center">
                   Begin records audit
                 </Button>

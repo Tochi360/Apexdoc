@@ -10,7 +10,7 @@ export function Testimonial() {
   return (
     <section
       id="testimonial"
-      className="relative bg-ink-night overflow-hidden py-32 lg:py-40"
+      className="relative bg-paper-brightest overflow-hidden py-32 lg:py-40"
       aria-labelledby="testimonial-heading"
     >
       <GlowBackground
@@ -20,10 +20,11 @@ export function Testimonial() {
             left: "50%",
             width: "900px",
             height: "900px",
-            variant: "cream",
+            variant: "warm",
             drift: true,
           },
         ]}
+        gradient="bg-gradient-to-b from-paper-brightest via-paper-light to-paper-brightest"
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-12">
@@ -37,7 +38,7 @@ export function Testimonial() {
           variants={reducedMotion ? fadeUpReduced : fadeUp}
         >
           <span
-            className="absolute -top-8 -left-2 md:-left-4 text-accent-cream font-serif italic select-none pointer-events-none"
+            className="absolute -top-8 -left-2 md:-left-4 text-accent-bronze font-serif italic select-none pointer-events-none"
             style={{ fontSize: "120px", lineHeight: 1, opacity: 0.4 }}
             aria-hidden
           >
@@ -61,15 +62,15 @@ export function Testimonial() {
           </p>
 
           <footer className="mt-10 flex items-center gap-4">
-            <span className="h-px w-8 bg-accent-cream" aria-hidden />
+            <span className="h-px w-8 bg-accent-bronze" aria-hidden />
             <div>
-              <p className="label-mono-sm" style={{ color: "var(--accent-blue)" }}>
+              <p className="label-mono-sm text-accent-blue">
                 OPERATIONS DIRECTOR
               </p>
               <p className="body-sm">Canadian Professional Services Firm</p>
             </div>
             <div
-              className="ml-auto w-20 h-8 border border-white/10 rounded text-xs flex items-center justify-center text-ice-faint hidden sm:flex"
+              className="ml-auto w-20 h-8 border border-border rounded text-xs flex items-center justify-center text-ink-faint hidden sm:flex"
               aria-hidden
             >
               LOGO
@@ -80,7 +81,7 @@ export function Testimonial() {
         <div className="mt-16 text-center">
           <a
             href="#contact"
-            className="label-mono hover:text-ice-bright transition-colors duration-300"
+            className="label-mono hover:text-ink-deep transition-colors duration-300"
           >
             [ 08 — CONTACT ↓ ]
           </a>

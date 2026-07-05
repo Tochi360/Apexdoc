@@ -14,7 +14,7 @@ export function WhyApex() {
   return (
     <section
       id="practice"
-      className="relative bg-ink-navy overflow-hidden py-32 lg:py-40"
+      className="relative bg-paper-light overflow-hidden py-32 lg:py-40"
       aria-labelledby="practice-heading"
     >
       <GlowBackground
@@ -24,11 +24,10 @@ export function WhyApex() {
             left: "-10%",
             width: "800px",
             height: "800px",
-            variant: "blue",
+            variant: "warm",
             drift: true,
           },
         ]}
-        gradient="bg-gradient-to-br from-ink-navy via-ink-mid/20 to-ink-navy"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
@@ -74,10 +73,10 @@ export function WhyApex() {
 
         <div className="mt-16">
           <a
-            href="#testimonial"
-            className="label-mono hover:text-ice-bright transition-colors duration-300"
+            href="#contact"
+            className="label-mono hover:text-ink-deep transition-colors duration-300"
           >
-            [ 07 — TESTIMONIAL ↓ ]
+            [ 08 — CONTACT ↓ ]
           </a>
         </div>
       </div>
