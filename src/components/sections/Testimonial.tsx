@@ -28,8 +28,6 @@ export function Testimonial() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-12">
-        <span className="label-mono-sm block mb-12 text-center">[ FILED 03.2026 ]</span>
-
         <motion.blockquote
           className="relative"
           initial="hidden"
@@ -77,15 +75,6 @@ export function Testimonial() {
             </div>
           </footer>
         </motion.blockquote>
-
-        <div className="mt-16 text-center">
-          <a
-            href="#contact"
-            className="label-mono hover:text-ink-deep transition-colors duration-300"
-          >
-            [ 08 — CONTACT ↓ ]
-          </a>
-        </div>
       </div>
     </section>
   );

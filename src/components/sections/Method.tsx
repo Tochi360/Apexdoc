@@ -8,7 +8,6 @@ import {
   useTransform,
 } from "framer-motion";
 import { GlowBackground } from "@/components/ui/GlowBackground";
-import { SectionLabel } from "@/components/ui/SectionLabel";
 import { WeightContrastHeading } from "@/components/ui/WeightContrastHeading";
 import { METHOD_STEPS } from "@/lib/constants";
 import { fadeUp, fadeUpReduced, stagger, staggerReduced, viewOnce } from "@/lib/animations";
@@ -46,8 +45,6 @@ export function Method() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <SectionLabel index="04" title="METHOD" meta="04 STEPS" />
-
         <WeightContrastHeading
           as="h2"
           id="method-heading"
@@ -102,15 +99,6 @@ export function Method() {
               </motion.div>
             ))}
           </motion.div>
-        </div>
-
-        <div className="mt-16">
-          <a
-            href="#who-we-serve"
-            className="label-mono hover:text-ink-deep transition-colors duration-300"
-          >
-            [ 05 — WHO WE SERVE ↓ ]
-          </a>
         </div>
       </div>
     </section>

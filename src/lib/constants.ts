@@ -11,7 +11,7 @@ export const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Method", href: "#method" },
   { label: "Who we serve", href: "#who-we-serve" },
-  { label: "About", href: "#practice" },
+  { label: "About", href: "#contact" },
 ] as const;
 
 export const HERO_ROTATING_WORDS = [
@@ -19,28 +19,6 @@ export const HERO_ROTATING_WORDS = [
   "mastered.",
   "simplified.",
   "secured.",
-] as const;
-
-export const HERO_PRINCIPLES = [
-  {
-    label: "DISCIPLINE",
-    lines: ["A studied approach to", "records and compliance."],
-  },
-  {
-    label: "DISCRETION",
-    lines: ["Trusted with sensitive", "business information."],
-  },
-  {
-    label: "DELIVERY",
-    lines: ["Implementation in weeks,", "not months."],
-  },
-] as const;
-
-export const HERO_STATS = [
-  { value: "500+", label: "DOCUMENTS", sublabel: "ORGANIZED" },
-  { value: "50+", label: "CANADIAN", sublabel: "BUSINESSES" },
-  { value: "100%", label: "AUDIT", sublabel: "PASS RATE" },
-  { value: "12 YRS", label: "COMBINED", sublabel: "EXPERIENCE" },
 ] as const;
 
 export interface Service {
@@ -93,7 +71,7 @@ export const SERVICES: Service[] = [
 export const METHOD_STEPS = [
   {
     number: "01.",
-    title: "Book the audit",
+    title: "Book a free record audit",
     description:
       "We meet, we listen, we assess. A complete diagnostic of your current records situation. No cost, no commitment.",
   },
@@ -174,14 +152,6 @@ export const FOOTER_SERVICES = [
   "Digitization",
   "Compliance Policy",
   "Training & Support",
-] as const;
-
-export const FOOTER_PRACTICE = [
-  "About",
-  "Method",
-  "Who we serve",
-  "Insights",
-  "Contact",
 ] as const;
 
 export const JSON_LD = {

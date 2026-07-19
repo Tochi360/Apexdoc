@@ -25,8 +25,6 @@ function BrandMark() {
       <div className="flex items-center gap-3">
         <span className="heading-md text-base !text-accent-blue">Apex</span>
         <span className="body-sm hidden sm:inline">Document Management</span>
-        <span className="h-4 w-px bg-ink-deep/15 hidden md:block" aria-hidden />
-        <span className="label-mono-sm hidden md:inline">EST. 2025 · CANADA</span>
       </div>
     </a>
   );

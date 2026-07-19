@@ -4,7 +4,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { GlowBackground } from "@/components/ui/GlowBackground";
-import { SectionLabel } from "@/components/ui/SectionLabel";
 import { WeightContrastHeading } from "@/components/ui/WeightContrastHeading";
 import { SERVICES } from "@/lib/constants";
 import { fadeUp, fadeUpReduced, stagger, staggerReduced, viewOnce } from "@/lib/animations";
@@ -32,14 +31,12 @@ export function Services() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <SectionLabel index="03" title="SERVICES" meta="05 DISCIPLINES" />
-
         <WeightContrastHeading
           as="h2"
           id="services-heading"
           lines={[
-            { thin: "Five disciplines." },
-            { thin: "", italic: "One discipline." },
+            { thin: "What we" },
+            { thin: "", italic: "offer." },
           ]}
         />
 
@@ -89,15 +86,6 @@ export function Services() {
             );
           })}
         </motion.div>
-
-        <div className="mt-16">
-          <a
-            href="#method"
-            className="label-mono hover:text-ink-deep transition-colors duration-300"
-          >
-            [ 04 — METHOD ↓ ]
-          </a>
-        </div>
       </div>
     </section>
   );

@@ -5,7 +5,6 @@ import { OpeningStatement } from "@/components/sections/OpeningStatement";
 import { Services } from "@/components/sections/Services";
 import { Method } from "@/components/sections/Method";
 import { WhoWeServe } from "@/components/sections/WhoWeServe";
-import { WhyApex } from "@/components/sections/WhyApex";
 import { CTA } from "@/components/sections/CTA";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
         <Services />
         <Method />
         <WhoWeServe />
-        <WhyApex />
         <CTA />
       </main>
       <Footer />

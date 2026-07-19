@@ -37,8 +37,6 @@ export function CTA() {
       <div className="grain-overlay absolute inset-0 z-[1]" aria-hidden />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <span className="label-mono block mb-12 text-accent-bronze">[ READY ]</span>
-
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -56,7 +54,7 @@ export function CTA() {
                 className="display-italic-inverted"
                 style={{ fontSize: "inherit" }}
               >
-                complimentary
+                free
               </span>
             </span>
             <span
@@ -75,10 +73,7 @@ export function CTA() {
 
           <div className="mt-12 flex flex-wrap gap-4 justify-center">
             <Button href="#inquiry-form" size="lg">
-              Begin records audit
-            </Button>
-            <Button href="mailto:info@apexdms.ca" variant="ghostDark" size="lg">
-              Contact our practice
+              Get a free records audit
             </Button>
           </div>
 

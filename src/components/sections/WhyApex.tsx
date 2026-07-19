@@ -3,7 +3,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { GlowBackground } from "@/components/ui/GlowBackground";
 import { Hairline } from "@/components/ui/Hairline";
-import { SectionLabel } from "@/components/ui/SectionLabel";
 import { WeightContrastHeading } from "@/components/ui/WeightContrastHeading";
 import { PRINCIPLES } from "@/lib/constants";
 import { fadeUp, fadeUpReduced, stagger, staggerReduced, viewOnce } from "@/lib/animations";
@@ -31,8 +30,6 @@ export function WhyApex() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <SectionLabel index="06" title="THE PRACTICE" meta="06 PRINCIPLES" />
-
         <WeightContrastHeading
           as="h2"
           id="practice-heading"
@@ -70,15 +67,6 @@ export function WhyApex() {
             </motion.div>
           ))}
         </motion.div>
-
-        <div className="mt-16">
-          <a
-            href="#contact"
-            className="label-mono hover:text-ink-deep transition-colors duration-300"
-          >
-            [ 08 — CONTACT ↓ ]
-          </a>
-        </div>
       </div>
     </section>
   );

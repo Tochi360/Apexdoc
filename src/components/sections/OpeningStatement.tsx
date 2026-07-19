@@ -37,8 +37,6 @@ export function OpeningStatement() {
         style={{ y }}
         className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12"
       >
-        <span className="label-mono block mb-12">[ 02 — A NOTE ON RECORDS ]</span>
-
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -53,19 +51,6 @@ export function OpeningStatement() {
               We help them never have to.
             </span>
           </h2>
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewOnce}
-          variants={reducedMotion ? fadeUpReduced : fadeUp}
-          className="mt-20 flex flex-col gap-6"
-        >
-          <div className="h-px w-[30%] bg-border-strong" aria-hidden />
-          <a href="#services" className="label-mono hover:text-ink-deep transition-colors">
-            [ 03 — SERVICES ↓ ]
-          </a>
         </motion.div>
       </motion.div>
     </section>

@@ -3,7 +3,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { GlowBackground } from "@/components/ui/GlowBackground";
-import { SectionLabel } from "@/components/ui/SectionLabel";
 import { WeightContrastHeading } from "@/components/ui/WeightContrastHeading";
 import { WorkspacePhoto } from "@/components/illustrations/WorkspacePhoto";
 import { SMB_RECORD_TYPES } from "@/lib/constants";
@@ -49,8 +48,6 @@ export function WhoWeServe() {
           />
 
           <div className="relative z-10">
-            <SectionLabel index="05" title="WHO WE SERVE" />
-
             <WeightContrastHeading
               as="h2"
               id="who-we-serve-heading"
@@ -89,7 +86,7 @@ export function WhoWeServe() {
             </motion.div>
 
             <div className="mt-10">
-              <Button href="#contact">Request a records assessment</Button>
+              <Button href="#contact">Get a free records audit</Button>
             </div>
           </div>
         </div>
